@@ -222,10 +222,10 @@ public class Exporter implements SpanExporter {
                 }
                 telemetry.setType("Microsoft.EventHub");
             } else if ("kafka-clients".equals(component)) {
-                telemetry.setType("Kafka");
+                telemetry.setType("Microsoft.EventHub");
                 telemetry.setTarget(span.getName()); // destination queue name
             } else if ("jms".equals(component)) {
-                telemetry.setType("JMS");
+                telemetry.setType("Azure Service Bus");
                 telemetry.setTarget(span.getName()); // destination queue name
             }
         }
